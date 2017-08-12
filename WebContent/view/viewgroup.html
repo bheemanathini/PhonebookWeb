@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>GroupName:{{viewGroupCtrl.groupInfo.groupName}}</h3>
+<h4>Members ({{viewGroupCtrl.groupInfo.members.length}})</h4>
+
+<table id="groups">
+	<tr>
+		<th>firstName</th>
+		<th>lastName</th>
+
+	</tr>
+    <tr ng-repeat="x in viewGroupCtrl.groupInfo.members">
+    <td>
+    {{x.firstName}}
+    </td>
+    <td>{{x.lastName}}
+    </td>
+    </tr>
+
+</table>
+<br>
+<button class="btn btn-secondary"ui-sref='addMembers({id:viewGroupCtrl.groupInfo.id})'> Add Member</button>
+
+</body>
+</html>

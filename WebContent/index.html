@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="Phonebook">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+#contacts, #groups {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 60%;
+}
+
+td, th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #ddd;
+}
+
+th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+}
+
+.table-fit {
+	width: 1px;
+}
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<nav class="navbar navbar-default">
+
+
+			<ul class="nav navbar-nav">
+				<li><a ui-sref='groups'>Groups</a></li>
+				<li><a ui-sref='contacts'>Contacts</a></li>
+			</ul>
+
+		</nav>
+	</div>
+	<div class="container-fluid">
+		<ui-view></ui-view>
+	</div>
+
+	<!-- libraries -->
+	<script src="angular.min.js"></script>
+	<script src="angular-ui-router.min.js"></script>
+
+	<!-- Modules -->
+	<script src="module/phonebook.module.js"></script>
+
+	<!-- Phonebook module artifacts -->
+	<script src="controller/GroupsListController.js"></script>
+	<script src="components/contacts.component.js"></script>
+	<script src="controller/ContactsListController.js"></script>
+	<script src="service/contacts.service.js"></script>
+	<script src="service/groups.service.js"></script>
+	<script src="components/groups.component.js"></script>
+	<script src="service/AddContactService.js"></script>
+	<script src="controller/AddContactController.js"></script>
+	<script src="controller/AddGroupController.js"></script>
+	<script src="controller/ViewGroupController.js"></script>
+	<script src="controller/AddMembersToGroupController.js"></script>
+</body>
+</html>
+</body>
+</html>

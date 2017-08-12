@@ -1,0 +1,21 @@
+<div class="table-responsive">
+<table class="table">
+	<tr>
+		<th>First name</th>
+		<th>Last name</th>
+		<th>Mobile</th>
+		<th>Home</th>
+		<th>Action</th>
+	</tr>
+
+	<tr ng-repeat="x in $ctrl.contacts">
+		<td>{{x.firstName}}</td>
+		<td>{{x.lastName}}</td>
+		<td>{{x.mobilePhone}}</td>
+		<td>{{x.homePhone}}</td>
+		<td>
+		<button ng-click="$ctrl.onRemove({id: x.id})">Delete</button>
+		</td>
+	</tr>
+</table>
+</div>

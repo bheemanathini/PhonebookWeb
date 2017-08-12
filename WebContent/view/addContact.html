@@ -1,0 +1,36 @@
+<form name='addContactForm' novalidate>
+
+	<div class="form-group">
+	<div>
+		<label for="firstname">Firstname:</label> <input type="text"
+			name="firstname" placeholder="Pick a firstname"
+			ng-model="addContactCtrl.contact.firstname" id="firstname"
+			class="form-control" required>
+			<span ng-if="(addContactForm.firstname.$error.required) && addContactForm.firstname.$touched">
+			firstname cannot be empty </span>
+		</div>
+		<div>
+		<label for="lastname">Lastname:</label> <input type="text"
+			name="lastname" placeholder=" Pick a lastname" ng-model="addContactCtrl.contact.lastname" id="lastname"
+			class="form-control" required>
+			
+			<span ng-if="(addContactForm.lastname.$error.required) && addContactForm.lastname.$touched">
+			lastnames cannot be empty </span>
+			</div>
+		<div>
+		<label for="mobile">Mobile:</label> <input type="text" name="mobile"
+			placeholder="Pick a mobile number"
+			ng-model="addContactCtrl.contact.mobile" id="mobile"
+			class="form-control">
+		</div>
+		<div>
+		<label for="mobile">Mobile:</label> <input type="text name="
+			homephone" placeholder="Pick a homephone"
+			ng-model="addContactCtrl.contact.homephone" id="home"
+			class="form-control">
+	</div>
+
+	<br>
+	<button ng-disabled="addContactForm.$invalid"
+		ng-click="addContactCtrl.submit()">Submit</button>
+</form>

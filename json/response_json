@@ -1,0 +1,65 @@
+//List of all contacts
+url: http://localhost:8080/Phone/webapi/contacts
+GET
+
+[
+    {
+        "firstName": "sam",
+        "homePhone": "111-111-1111",
+        "id": 23,
+        "lastName": "vrit",
+        "mobilePhone": "222-222-222"
+    },
+    {
+        "firstName": "Anuradha",
+        "id": 26,
+        "lastName": "Bheemanathini"
+    }
+]
+
+//Add contact
+url: http://localhost:8080/Phone/webapi/contacts/add
+POST
+Form data
+firstname:anu	
+lastname:radha	
+mobile:111-111-1111
+homephone:222-222-2222
+
+//Delete contact
+DELETE
+http://localhost:8080/Phone/webapi/contacts/28
+28-contact id
+
+//List of all groups
+GET
+url:http://localhost:8080/Phone/webapi/groups
+  [
+    {
+        "id": 10,
+        "name": "testing"
+    },
+    {
+        "id": 12,
+        "name": "bench"
+    },
+    {
+        "id": 13,
+        "name": "a"
+    }
+]
+
+//Add group
+POST
+url:http://localhost:8080/Phone/webapi/groups/addGroup
+{
+	"name":"hello"
+}
+
+//Delete group
+DELETE
+
+//Add members to group
+GET
+http://localhost:8080/Phone/webapi/groups/23/setMembers?cid=27
+url: http://localhost:8080/Phone/webapi/groups/13

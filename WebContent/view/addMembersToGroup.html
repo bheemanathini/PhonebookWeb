@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="table-responsive">
+	<table class="table">
+		<tr ng-repeat="x in addMembersToGroupCtrl.contactsWithMembershipInfo">
+			<td>{{x.contact.firstName}}</td>
+			<td><input type="checkbox" ng-checked="x.isMember" ng-model="x.isMember"></td>
+		</tr>
+	</table>
+	<div class="table-responsive">
+	<button class="button"ng-click=addMembersToGroupCtrl.modify()>Done</button>
+</body>
+</html>
