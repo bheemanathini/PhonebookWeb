@@ -1,14 +1,26 @@
 <div class="table-responsive">
 <table class="table">
 	<tr>
-		<th>First name</th>
-		<th>Last name</th>
+	<th>
+	<a href="#" ng-click="$ctrl.sort = 'firstName'">
+     First name
+      <span ng-show="$ctrl.sort == 'firstName'" class="fa fa-caret-down"></span>
+    </a>
+    </th>
+		
+		<th>
+		<a href="#" ng-click="$ctrl.sort = 'lastName'">
+		Last name
+      <span ng-show="$ctrl.sort == 'lastName'" class="fa fa-caret-down"></span>
+    </a></th>
+    
+    
 		<th>Mobile</th>
 		<th>Home</th>
 		<th>Action</th>
 	</tr>
 
-	<tr ng-repeat="x in $ctrl.contacts">
+	<tr ng-repeat="x in $ctrl.contacts | orderBy:$ctrl.sort:$ctrl.reverse"">
 		<td>{{x.firstName}}</td>
 		<td>{{x.lastName}}</td>
 		<td>{{x.mobilePhone}}</td>
@@ -19,3 +31,4 @@
 	</tr>
 </table>
 </div>
+

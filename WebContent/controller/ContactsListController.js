@@ -8,6 +8,9 @@
 	function ContactsListController(contacts, $http, $state, ContactsService){
 		var contactsList = this;
 		contactsList.contacts = contacts;
+		
+		contactsList.sort = 'firstName';
+		contactsList.reverse = false;
 
 		contactsList.removeContact = function(id){
 			console.log("remove called", id);

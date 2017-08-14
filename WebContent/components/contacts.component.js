@@ -5,7 +5,11 @@
 		templateUrl: 'view/contactslist.html',
 		bindings: {
 			contacts: '<',
-			onRemove: '&'
+			onRemove: '&',
+			sort: '=',
+			reverse: '='
+
+			
 		}
 	});
 	
