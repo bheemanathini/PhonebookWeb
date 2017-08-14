@@ -4,11 +4,12 @@
 		<th>Action</th>
 	</tr>
 
-	<tr ng-repeat="x in $ctrl.groups">
+	<tr ng-repeat="x in $ctrl.groups | orderBy:'name':false">
 		<td><a ui-sref="viewgroup({id:x.id})">{{x.name}}</a></td>
 		<td>
 		<button ng-click="$ctrl.onRemove({id: x.id})">Delete</button>
 		</td>
 		
 	</tr>
+	
 </table>
